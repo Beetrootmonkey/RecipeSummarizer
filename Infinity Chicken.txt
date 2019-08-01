@@ -1,0 +1,172 @@
+250mb Lubricant
+100mb Teflon
+8 Neutronium Block
+	91 Neutronium Ingot
+		2912 TNT
+			11648 Gelled Toluene
+			728000mb Sulfuric Acid
+		819 Neutronium Nugget
+			3276 TNT
+			7371 Tiny Pile of Neutronium
+8 Corrupted Glitch Heart
+8 Stemcells
+1 Chaos Shard
+10000mb Primal Mana
+	10 Mana Dust
+		10 Pyrotheum Dust
+		10 Cryotheum Dust
+		10 Aerotheum Dust
+		10 Petrotheum Dust
+		100000mb Unstable Mana
+			50 Simple Power Catalyst
+				50 Redstone
+				50 Nether Wart
+				50 Gunpowder
+			1000 Redstone
+			50000mb Ethanol
+			500000mb Mana
+				84 Yellow Nitor
+				500 Vinteum Dust
+				500000mb Menril Resin
+					125 Menril Wood
+	10 Vinteum Dust
+	1200mb Deuterium
+16 Crystal Matrix
+	144 Crystal Matrix Ingot
+		288 Diamond Lattice
+			1152 Diamond Plate
+				1152 Diamond
+			1152 Star Metal Screw
+				144 Star Metal Ingot
+			288 Infused Diamond
+				288 Diamond
+				2304 Dimensional Shard
+				41472mb Energized Glowstone
+					288 Glowstone Dust
+		144 Nether Star
+		1440000mb Liquid Starlight
+16 Crystal Cluster
+	64 Tungstensteel Plate
+	16 Vengeful Will Crystal
+	16 Corrosive Will Crystal
+	16 Demon Will Crystal
+	16 Steadfast Will Crystal
+	16 Destructive Will Crystal
+1 Armer Bob
+20 Awakened Draconium Block
+4 Infinity Block
+	36 Infinity Ingot
+		36 Infinity Catalyst
+			144 Empowered Diamatine Crystal Block
+				1296 Empowered Diamatine Crystal
+					1296 Diamatine Crystal
+					1296 Flawless Diamond
+					1296 Mana Pearl
+						1296 Eye of Ender
+						648000mb Unstable Mana
+			144 Block of Silicon Rubber
+			72 Neutronium Block
+				648 Neutronium Ingot
+					20736 TNT
+					5832 Neutronium Nugget
+						23328 TNT
+						52488 Tiny Pile of Neutronium
+			72 Flux Block
+				360 Flux
+				288 Flux Core
+					288 Flux
+					288 Skystone Plates
+					72 Improved Ender Eye
+					324mb Destabilized Redstone
+			72 Hardened Enderium Glass
+				72 Enderium Ingot
+				72 Hardened Glass
+					72 Obsidian
+					144 Lead Dust
+			36 Advanced Alchemical Construct
+				144 Iron Plates
+				72 Essentia Valve
+					72 Essentia Tube
+					72 Lever
+				72 Essentia Tube
+				72 Void Metal Plates
+				36 Great Wood Planks
+				36 Primordial Pearl
+				108000mb Unstable Mana
+			36 Neutronium Ingot
+				1152 TNT
+				351 Neutronium Nugget
+					1404 TNT
+					3159 Tiny Pile of Neutronium
+		144 Awakened Draconium Ingot
+			16 Awakened Draconium Block
+				16 Charged Draconium Block
+					16 Block of Draconium
+						20736mb Draconium
+							10368mb Osmiridium
+							10368mb Red Matter
+								72 Red Matter
+									72 Void Metal
+										72 Void Seed
+										288 Destructive Will Crystal
+										288000mb Liquid Nightmares
+									288 Dark Matter
+										1152 Vanadium Ingot
+										288 Empowered Void Crystal
+											288 Void Crystal
+											288 Flawless Coal
+											288 Mana Pearl
+												288 Eye of Ender
+												144000mb Unstable Mana
+										576000mb Primal Mana
+											576 Mana Dust
+												576 Pyrotheum Dust
+												576 Cryotheum Dust
+												576 Aerotheum Dust
+												576 Petrotheum Dust
+												5760000mb Unstable Mana
+													2880 Simple Power Catalyst
+														2880 Redstone
+														2880 Nether Wart
+														2880 Gunpowder
+													57600 Redstone
+													2880000mb Ethanol
+													28800000mb Mana
+														4800 Yellow Nitor
+														28800 Vinteum Dust
+														28800000mb Menril Resin
+											576 Vinteum Dust
+											69120mb Deuterium
+									720000mb Life Essence
+								18000mb Argon
+					64 Flux
+					800000mb Liquid Starlight
+				8 Neutronium Ingot
+					256 TNT
+					72 Neutronium Nugget
+						288 TNT
+						648 Tiny Pile of Neutronium
+				8 Crystal Matrix Ingot
+					16 Diamond Lattice
+						64 Diamond Plates
+							64 Diamond
+						64 Star Metal Screw
+							8 Star Metal Ingot
+						16 Infused Diamond
+							16 Diamond
+							128 Dimensional Shard
+							2304mb Energized Glowstone
+								16 Glowstone Dust
+					8 Nether Star
+					80000mb Liquid Starlight
+				4 Dragonstone
+					4 Mana Diamond
+						4 Diamond
+						1000mb Unstable Mana
+				4 Dragon Heart
+		18000mb Argon
+-243261mb Liquid Starlight
+-203 Nether Star
+-4600 Tiny Pile of Neutronium
+-1052 Diamond // LMAO
+-16141900mb Mana // LOL
