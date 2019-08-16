@@ -201,4 +201,4 @@
 1 Infinity Boots
 1 Infinity Leggings
 1 Infinity Chestplate
-1 Infinity Helmet
+1 Infinity Helmet #TC #R

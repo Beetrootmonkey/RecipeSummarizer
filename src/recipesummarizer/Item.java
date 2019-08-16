@@ -5,6 +5,8 @@
  */
 package recipesummarizer;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -20,7 +22,6 @@ public class Item {
             return this == FLUID ? " mB" : "";
         }
     }
-    
     
     Type type;
     String name;
@@ -63,6 +64,4 @@ public class Item {
         }
         return true;
     }
-    
-    
 }
