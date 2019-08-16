@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -32,25 +33,28 @@ public class RecipeSummarizer {
     static List<Ingredient> ingredients = new ArrayList<>();
 
     static Map<Item, List<Ingredient>> recipes = new HashMap<>();
-    
+
+    static boolean onlyPositiveEntries = false;
+    static boolean showIntermediates = false;
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
 
-        boolean onlyPositiveEntries = args.length > 1 ? "-onlypositive".equals(args[1]) : false;
-        
+        onlyPositiveEntries = Arrays.asList(args).contains("-onlypositive");
+        showIntermediates = Arrays.asList(args).contains("-showintermediates");
+
         readFile(args[0]);
 
         ingredients.forEach(i -> registerRecipeForNode(i));
 
         ingredients.forEach(i -> completePartialRecipes(i));
 
-        ingredients.forEach(i -> registerNodeIfLeaf(i));
+        ingredients.forEach(i -> registerNode(i));
 
         leaves.keySet().stream().filter(key -> onlyPositiveEntries ? leaves.get(key) > 0 : true).sorted((a, b) -> a.name.compareTo(b.name))
-                .forEach(key -> System.out.println(String.format("%s: %,.0f %s", key.name, leaves.get(key), key.type.getUnit())));
+                .forEach(key -> System.out.println(String.format("%s: %,.0f%s", key.name, leaves.get(key), key.type.getUnit())));
     }
 
     static void completePartialRecipes(Ingredient ingredient) {
@@ -102,13 +106,15 @@ public class RecipeSummarizer {
         Map<Integer, Ingredient> currentParent = new HashMap<>();
         for (int i = 0; i < allLines.size(); i++) {
             String l = allLines.get(i);
-            Pattern pattern1 = Pattern.compile("(-*\\w+ *)+");
-            Matcher matcher1 = pattern1.matcher(l);
+            String[] lineParts = l.split("//");
+            String line = lineParts[0];
+            Pattern pattern1 = Pattern.compile("([-\\w()]+ *)+");
+            Matcher matcher1 = pattern1.matcher(line);
             if (matcher1.find()) {
-                String match = matcher1.group();
-                String[] nameParts = match.split(" //");
-                String name = nameParts[0];
-                String whiteSpace = matcher1.replaceAll("").replaceAll("\t", "    ");
+                String matchingString = matcher1.group();
+                int index = l.indexOf(matchingString);
+                String whiteSpace = matcher1.replaceAll("").substring(0, index).replaceAll("\t", "    ");
+                String name = matchingString.trim();
                 int padding = (int) (whiteSpace.length() * 0.25);
                 Ingredient ingredient = getIngredientFromString(name);
                 if (ingredient == null) {
@@ -126,16 +132,23 @@ public class RecipeSummarizer {
         }
     }
 
-    static void registerNodeIfLeaf(Ingredient ingredient) {
-        if (ingredient.ingredients.isEmpty()) {
+    static void registerNode(Ingredient ingredient) {
+
+        boolean isLeaf = ingredient.ingredients.isEmpty();
+        boolean isBranchButShowRegardless = !isLeaf && showIntermediates;
+
+        if (isLeaf || isBranchButShowRegardless) {
             double currentAmount = 0L;
-            if (leaves.containsKey(ingredient.item)) {
-                currentAmount = leaves.get(ingredient.item);
+            Item item = isBranchButShowRegardless
+                    ? new Item(ingredient.item.type, "(" + ingredient.item.name + ")")
+                    : ingredient.item;
+            if (leaves.containsKey(item)) {
+                currentAmount = leaves.get(item);
             }
-            leaves.put(ingredient.item, currentAmount + ingredient.amount);
-        } else {
-            ingredient.ingredients.forEach(i -> registerNodeIfLeaf(i));
+            leaves.put(item, currentAmount + ingredient.amount);
         }
+
+        ingredient.ingredients.forEach(i -> registerNode(i));
     }
 
 }

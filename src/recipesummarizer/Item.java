@@ -5,8 +5,6 @@
  */
 package recipesummarizer;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 /**
@@ -19,7 +17,7 @@ public class Item {
         FLUID;
               
         public String getUnit() {
-            return this == FLUID ? "mB" : "";
+            return this == FLUID ? " mB" : "";
         }
     }
     
